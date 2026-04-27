@@ -1,1 +1,40 @@
-<p>navbar works!</p>
+<header class="bg-gray-800 text-white">
+  <nav class="w-full flex flex-col md:flex-row md:items-center md:justify-between p-4">
+    <!-- linha superior -->
+    <div class="flex items-center justify-between w-full md:w-auto">
+      <!-- logo -->
+      <div class="hover-effect font-bold text-2xl cursor-pointer">
+        <a routerLink="/">MovieHub</a>
+      </div>
+
+      <!-- ícones -->
+      <div class="flex gap-6 md:hidden">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-bookmark"></i>
+      </div>
+    </div>
+
+    <!-- barra de busca (apenas tablet/desktop) -->
+    <div class="hidden md:flex items-center gap-3 flex-1 max-w-xl mx-6">
+      <div class="flex items-center bg-gray-700 rounded px-3 py-2 w-full">
+        <i class="fa-solid fa-magnifying-glass mr-2 text-gray-400"></i>
+
+        <input
+          type="text"
+          placeholder="Procurar filmes..."
+          class="bg-transparent outline-none w-full text-sm"
+        />
+      </div>
+
+      <!-- bookmark ao lado da busca -->
+      <i class="fa-regular fa-bookmark text-lg cursor-pointer"></i>
+    </div>
+
+    <!-- menu -->
+    <ul class="flex flex-row mt-4 gap-4 md:mt-0 md:gap-6 text-sm text-gray-300 md:ml-auto">
+      <li><a routerLink="/movies">Movies</a></li>
+      <li><a routerLink="/series">Series</a></li>
+      <li><a routerLink="/tv-shows">TV Shows</a></li>
+    </ul>
+  </nav>
+</header>
