@@ -1,0 +1,147 @@
+<article class="relative min-h-[70vh] flex flex-col justify-end text-white pt-20 overflow-hidden">
+  <!-- imagem de fundo -->
+  <div
+    class="absolute inset-0 bg-cover bg-center"
+    [style.background-image]="'url(https://xl.movieposterdb.com/22_06/2022/1745960/xl_1745960_c7c6b638.jpg)'"
+    [style.filter]="'blur(' + blur + 'px)'"
+    [style.transform]="'scale(' + scale + ')'"
+  ></div>
+
+  <!-- overlay escuro -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent"></div>
+
+  <!-- conteúdo -->
+  <div class="relative z-10 p-4 space-y-3 max-w-2xl mt-auto">
+    <p class="text-sm text-gray-300">Paramount Pictures</p>
+
+    <h1 class="text-3xl md:text-5xl font-bold">Top Gun: Maverick</h1>
+
+    <ul class="flex flex-wrap gap-3 text-sm text-gray-300">
+      <li>+12</li>
+      <li>130 min</li>
+      <li>2022</li>
+      <li>Apple TV</li>
+      <li>Prime Video</li>
+    </ul>
+
+    <!-- botões -->
+    <div class="flex flex-col items-center justify-center gap-3 mt-4 w-full">
+      <button
+        class="w-full bg-white text-black px-4 py-2 rounded flex items-center justify-center gap-2"
+      >
+        <p class="align-center font-bold">
+          <i class="fa-regular fa-circle-play"></i> Assistir Trailer
+        </p>
+      </button>
+    </div>
+
+    <ul class="flex justify-around text-sm text-gray-300 mt-5">
+      <li class="flex flex-col items-center">
+        <i class="fa-solid fa-circle-plus text-xl"></i>
+        <span>Minha lista</span>
+      </li>
+
+      <li class="flex flex-col items-center">
+        <i class="fa-solid fa-thumbs-up text-xl"></i>
+        <span>Classificar</span>
+      </li>
+
+      <li class="flex flex-col items-center">
+        <i class="fa-solid fa-circle-info text-xl"></i>
+        <span>Informações</span>
+      </li>
+    </ul>
+
+    <p
+      class="text-sm text-gray-300 mt-4 transition-all duration-300"
+      [class.line-clamp-3]="!expanded"
+    >
+      Top Gun: Maverick é a sequência de 2022 de Top Gun: Ases Indomáveis, dirigida por Joseph
+      Kosinski. A história acompanha Pete "Maverick" Mitchell (Tom Cruise), um piloto de testes da
+      Marinha dos EUA que, mais de 30 anos após se formar na escola Top Gun, é convocado para
+      treinar um grupo de graduados de elite para uma missão impossível.
+    </p>
+
+    <button (click)="expanded = !expanded" class="text-sm text-gray-400 hover:text-white">
+      {{ expanded ? 'Ver menos' : 'Ver mais' }}
+    </button>
+  </div>
+</article>
+
+<section class="w-full p-4 text-white bg-black">
+  <div class="flex flex-col gap-3 w-full max-w-2xl">
+    <!-- Amazon Prime Video -->
+    <button
+      class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold bg-[#00A8E1] text-white hover:bg-[#0095c7] transition-colors"
+    >
+      <i class="fa-brands fa-amazon text-lg"></i>
+      Assistir no Amazon Prime Video
+    </button>
+
+    <!-- Apple TV -->
+    <button
+      class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold bg-[#1d1d1f] text-white border border-white/10 hover:bg-[#2c2c2e] transition-colors"
+    >
+      <i class="fa-brands fa-apple text-lg"></i>
+      Assistir no Apple TV
+    </button>
+  </div>
+</section>
+
+<aside class="w-full p-4 pb-20 text-white bg-black">
+  <h2 class="text-xl font-bold mb-3">Do mesmo diretor</h2>
+  <div class="flex overflow-x-auto gap-4">
+    <div
+      class="min-w-[150px] h-[225px] bg-cover bg-center rounded-lg flex-shrink-0"
+      style="
+        background-image: url('https://xl.movieposterdb.com/22_06/2022/1745960/xl_1745960_c7c6b638.jpg');
+      "
+    ></div>
+    <div
+      class="min-w-[150px] h-[225px] bg-cover bg-center rounded-lg flex-shrink-0"
+      style="
+        background-image: url('https://xl.movieposterdb.com/22_06/2022/1745960/xl_1745960_c7c6b638.jpg');
+      "
+    ></div>
+    <div
+      class="min-w-[150px] h-[225px] bg-cover bg-center rounded-lg flex-shrink-0"
+      style="
+        background-image: url('https://xl.movieposterdb.com/22_06/2022/1745960/xl_1745960_c7c6b638.jpg');
+      "
+    ></div>
+    <div
+      class="min-w-[150px] h-[225px] bg-cover bg-center rounded-lg flex-shrink-0"
+      style="
+        background-image: url('https://xl.movieposterdb.com/22_06/2022/1745960/xl_1745960_c7c6b638.jpg');
+      "
+    ></div>
+  </div>
+
+  <h2 class="text-xl font-bold mb-3 mt-4">Você também pode gostar</h2>
+  <div class="flex overflow-x-auto gap-4">
+    <div
+      class="min-w-[150px] h-[225px] bg-cover bg-center rounded-lg flex-shrink-0"
+      style="
+        background-image: url('https://xl.movieposterdb.com/22_06/2022/1745960/xl_1745960_c7c6b638.jpg');
+      "
+    ></div>
+    <div
+      class="min-w-[150px] h-[225px] bg-cover bg-center rounded-lg flex-shrink-0"
+      style="
+        background-image: url('https://xl.movieposterdb.com/22_06/2022/1745960/xl_1745960_c7c6b638.jpg');
+      "
+    ></div>
+    <div
+      class="min-w-[150px] h-[225px] bg-cover bg-center rounded-lg flex-shrink-0"
+      style="
+        background-image: url('https://xl.movieposterdb.com/22_06/2022/1745960/xl_1745960_c7c6b638.jpg');
+      "
+    ></div>
+    <div
+      class="min-w-[150px] h-[225px] bg-cover bg-center rounded-lg flex-shrink-0"
+      style="
+        background-image: url('https://xl.movieposterdb.com/22_06/2022/1745960/xl_1745960_c7c6b638.jpg');
+      "
+    ></div>
+  </div>
+</aside>
