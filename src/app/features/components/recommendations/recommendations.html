@@ -57,3 +57,42 @@
     />
   </div>
 </section>
+
+<!--
+
+<section class="w-full bg-black text-white p-4">
+
+  <p class="font-bold my-2">Filmes populares</p>
+  <div class="w-full flex gap-4 overflow-x-auto pb-2">
+    @for (movie of popularMovies; track movie.id) {
+      <img
+        class="w-32 h-48 object-cover rounded flex-shrink-0 cursor-pointer hover:scale-105 transition-transform"
+        [src]="getPoster(movie.poster_path)"
+        [alt]="movie.title"
+        [title]="movie.title"
+      />
+    }
+  </div>
+
+  <p class="font-bold my-2">TOP 10 Filmes Hoje</p>
+  <div class="w-full flex gap-4 overflow-x-auto pb-2">
+    @for (movie of topRatedMovies; track movie.id; let i = $index) {
+      <div
+        class="relative flex-shrink-0 cursor-pointer"
+      >
+        
+        <span class="absolute bottom-0 left-1 text-6xl font-black text-white/30 leading-none">
+          {{ i + 1 }}
+        </span>
+        <img
+          class="w-32 h-48 object-cover rounded hover:scale-105 transition-transform"
+          [src]="getPoster(movie.poster_path)"
+          [alt]="movie.title"
+        />
+      </div>
+    }
+  </div>
+
+</section>
+
+-->
